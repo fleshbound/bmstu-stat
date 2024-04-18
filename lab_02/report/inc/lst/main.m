@@ -2,10 +2,9 @@ X_ = csvread("./data/x.csv");
 X_ = sort(X_);
 n_max = length(X_);
 
-%printf("Введите объем выборки (целое от 1 до %d включительно):\n\t", n_max);
-%n = str2double(input("N = ", "s"));
 n = n_max;
-begin = 5;
+
+begin = 1;
 
 X = X_(1:n);
 mu = sum(X) / n;
@@ -87,4 +86,5 @@ p4 = plot((begin:n), sigma_high_N, "Color", "blue", "linestyle", ":", "linewidth
 hold off;
 xlabel("Объем выборки n");
 grid on;
+
 
